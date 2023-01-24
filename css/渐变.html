@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border: solid gray;
+        }
+        /* 线性简便 */
+        .box2{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: gainsboro;
+            border: gainsboro solid;
+            border-radius: 0px;
+            background-image: linear-gradient(-45deg, gray, darkgray, gainsboro)
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(farthest-corner at 0 0,yellow 0, red );
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

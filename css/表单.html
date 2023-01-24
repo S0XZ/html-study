@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<style>
+    .divider{
+        height: 1px;
+        background-color: gainsboro;
+        margin: 10px 0;
+    }
+</style>
+<body>
+    <form action="target.html" >
+        用户名 <input type="text" value="" name="username" autocomplete="on" disabled>
+        <br><br>
+        密码 <input type="password" name="password">
+        <br><br>
+        单选按钮 <input type="radio" name="gender" value="male" checked>
+                <input type="radio" name="gender" value="female">
+        <br><br>
+        多选框 <input type="checkbox" name="" id="" checked>
+            <input type="checkbox" name="" id="">
+        <br><br>
+        下拉列表 <select name="" id="">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+        </select>
+        <br><br>
+        <input type="submit" value="提交">
+    </form>
+
+    <div class="divider"></div>
+    <!-- 表单2 -->
+    <form action="">
+        <br>
+        <input type="button" value="按钮">
+        <input type="reset">
+        <br>
+        <input type="color" value="取色器">
+        <br>
+        <input type="email" value="邮件" disabled>
+        <br>
+        <input type="tel" value="手机号" autofocus>
+        <input type="submit">
+    </form>
+</body>
+</html>

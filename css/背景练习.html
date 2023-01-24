@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 900px;
+            height: 32px;
+            margin: 0 auto;
+            background-color: black;
+            background-image: url(./img/bg2.png);
+            background-repeat: repeat-x;
+        }
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-color: gainsboro;
+            border-radius: 0px;
+            border: solid silver;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: silver;
+        }
+        a:active{
+            background-color: black;
+            border: solid black;
+        }
+        a:active .btn-text{
+            color: white;
+        }
+        .btn-text{
+            color: rgba(0, 0, 0, 0.673);
+            text-decoration: none;
+            text-decoration-line: none;
+            font-family: sans-serif;
+            line-height: 29px;
+            display: block;
+            text-align: center;
+        }
+
+        p {
+            font-family: monospace;
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p:hover{
+            background-color: gainsboro;
+            animation-duration: 0.3s;
+            animation-name: btn-hover;
+
+        }
+        p:active{
+            background-color: gray;
+            animation-duration: 0.3s;
+            animation-name: btn-act;
+        }
+
+        @keyframes btn-hover {
+        from {
+            background-color: transparent;
+        }
+        to {
+            background-color: gainsboro;
+        }
+        }
+        @keyframes btn-act {
+        from {
+            background-color: gainsboro;
+        }
+        to {
+            background-color: gray;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <a href="javascript:;">
+        <span class="btn-text">Tap me</span>
+    </a>
+
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quam illum, sequi nam accusamus culpa a eligendi nobis autem et eaque consequatur qui eos mollitia! Nostrum dolorum ut inventore? Nesciunt.</p>
+    </div>
+
+</body>
+</html>

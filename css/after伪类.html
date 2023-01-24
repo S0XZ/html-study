@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color: gainsboro;
+            border: solid;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: silver;
+            float: left;
+        }
+
+        .box1::after{
+            content: '';
+            clear: both;
+            display: block;
+            /* 方法2 */
+        }
+
+        .box3{
+            height: 1px;
+            background-color: red;
+            clear: both;
+            /* clear使得box3不受浮动影响，放置在box2下方（本来跟box2是一个位置） */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+</html>

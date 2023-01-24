@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <link rel="stylesheet" href="./css/top-bar.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="icon" href="./favicon.ico">
+    <style>
+        
+
+        /* 设置左侧导航条 */
+        .left-menu{
+            width: 234px;
+            height: 420px;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, .7);
+            position: absolute;
+            z-index: 2;
+            left: -120px;
+            line-height: 1;
+        }
+        .left-menu>li>a{
+            display: block;
+            line-height: 42px;
+            color: whitesmoke;
+            font-size: 16px;
+            padding: 0 30px;
+            transition: all 0.1s;
+        }
+        .left-menu>li>a:hover{
+            background-color: #ff6700;
+        }
+        .left-menu>li>a>i{
+            float: right;
+            line-height: 42px;
+        }
+        .all-goods-wrapper{
+            position: relative;
+            background-color: transparent;
+        }
+
+        /* banner */
+        .banner{
+            height: 460px;
+            position: relative;
+        }
+        .banner>ul>li>a>img{
+            object-fit:cover;
+            width: 1226px;
+            height: 460px;
+            vertical-align: bottom;
+            background-color: gainsboro;
+        }
+        .banner>ul>li{
+            position: absolute;
+        }
+        /* 设置指示器 */
+        .pointer{
+            position: absolute;
+            right: 35px;
+            bottom: 22px;
+        }
+        .pointer>a{
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.311);
+            margin: 6px;
+        }
+        .pointer>a:hover,
+        .pointer>a.active{
+            background-color: whitesmoke;
+        }
+
+        /* 设置向前/向后 */
+        .prev-next{
+            border: solid;
+            background-color: rebeccapurple;
+        }
+        .prev-next>a{
+            width: 41px;
+            height: 69px;
+            line-height: 69px;
+            text-align: center;
+
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            color: white;
+            font-size: 40px;
+        }
+        .prev-next>a:hover{
+            background-color: rgba(0, 0, 0, 0.374);
+        }
+        .prev-next>.prev{
+            left: 234px;
+        }
+        .prev-next>.next{
+            right: 0;
+        }
+
+        /* 设置回到顶部的元素 */
+        .back-to-top{
+            width: 26px;
+            height: 206px;
+            position: fixed;
+            background-color: whitesmoke;
+            border: solid gainsboro;
+            box-sizing: border-box;
+            bottom: 60px;
+            right: 50%;
+            margin-right: -639px;
+        }
+
+        /* 设置广告区域 */
+        .ads>ul.shortcut,
+        .ads>ul.ads-img,
+        .ads li{
+            float: left;
+        }
+        .ads{
+            margin-top: 14px;
+            height: 170px;
+        }
+        .ads>.shortcut{
+            width: 234px;
+            height: 170px;
+            background-color: gray;
+            margin-right: 14px;
+            text-align: center;
+        }
+        .ads>.shortcut>li{
+            position: relative;
+        }
+
+        .ads>.shortcut>li::before{
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 1px;
+            background-color: darkgray;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: 0 auto;
+        }
+        .ads>.shortcut>li>a{
+            color: #cfccca;
+            display: block;
+            width: 76px;
+            height: 84px;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        .ads>.shortcut>li>a>i{
+            display: block;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 7px;
+        }
+        .ads>.shortcut>li>a:hover{
+            color: whitesmoke;
+        }
+        .ads>.ads-img>li{
+            border: solid gainsboro;
+            box-sizing: border-box;
+            width: 316px;
+            margin-right: 15px;
+        }
+        .ads>.ads-img>li:last-child{
+            margin-right: 0;
+        }
+        .ads-img>li>a>img{
+            width: 100%;
+            vertical-align: top;
+        }
+        
+    </style>
+</head>
+<body>
+   <!-- 顶部导航条 -->
+   <div class="topbar-wrapper">
+        <div class="topbar w clearfix">
+            <ul class="service">
+                <li><a href="javascript:;">小米商城</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">MIUI</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">云服务</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">金融</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">优品</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">小爱开放平台</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">企业团购</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">纸质证照</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">协议规则</a></li>
+                <li class="line">|</li>
+                <li>
+                    <a href="#" class="app-download">下载app
+                        <div class="qrcode">
+                            <img src="./img/qrcode.png" alt="士兵">
+                            <span>小米商城App</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">Select Location</a></li>
+            </ul>
+            
+            <ul class="shop-cart">
+                <li >
+                    <a href="javascript:;">
+                    <i class="fas fa-shopping-cart"></i>
+                    购物车
+                    </a>
+                    <div class="empty-cart clearfix">
+                        购物车是空的。
+                    </div>
+                </li>
+                
+            </ul>
+            <ul class="user-info">
+                <li><a href="javascript:;">登陆</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">注册</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">消息通知</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 头部 -->
+   <div class="header-wrapper">
+        <div class="header w">
+            <h1 class="logo" title="小米">
+                <a href="/" class="home">H</a>
+                <a href="/" class="mi">M</a>
+            </h1>
+
+            <div class="nav-wrapper">
+                <ul class="nav clearfix">
+                    <li class="all-goods-wrapper">
+                        <a href="javascript:;" style="visibility: hidden">全部商品分类</a>
+                        <!-- 左侧导航条 -->
+                        <ul class="left-menu">
+                            <li>
+                                <a href="#">
+                                    手机 电话卡
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    电视 盒子
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    笔记本 平板
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    家电 插线板
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    出行 穿戴
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    智能 路由器
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="show-goods"><a href="javascript:;">小米手机</a></li>
+                    <li class="show-goods"><a href="javascript:;">Redmi 红米</a></li>
+                    <li class="show-goods"><a href="javascript:;">电视</a></li>
+                    <li class="show-goods"><a href="javascript:;">笔记本</a></li>
+                    <li class="show-goods"><a href="javascript:;">家电</a></li>
+                    <li class="show-goods"><a href="javascript:;">路由器</a></li>
+                    <li class="show-goods"><a href="javascript:;">智能硬件</a></li>
+                    <li><a href="javascript:;">服务</a></li>
+                    <li><a href="javascript:;">社区</a></li>
+
+                    <!-- 创建弹出层 -->
+                    <div class="goods-info">
+
+                    </div>
+                </ul>
+            </div>
+
+            <div class="search-wrapper">
+                <form class="search" action="#">
+                    <input class="search-inp" type="text">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="banner-wrapper">
+        <div class="banner w">
+            <ul class="img-list">
+                <li>
+                    <a href="#">
+                        <img src="./img/Soldier.jpeg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/Uncle1.jpeg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/miShow.webp" alt="">
+                    </a>
+                </li>
+                
+            </ul>
+
+            <div class="pointer">
+                <a class="active" href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+
+            <div class="prev-next">
+                <a href="javascript:;" class="prev">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <a href="jacascript:;" class="next">
+                    <i class="fas fa-angle-right"></i>
+                    
+                </a>
+            </div>
+        </div>
+   </div>
+
+   <!-- 回到顶部固定条 -->
+   <div class="back-to-top"></div>
+
+   <!-- 广告容器 -->
+   <div class="ads w">
+        <ul class="shortcut">
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                小米秒杀
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                企业团购
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                S妈通道
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                米粉卡
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                以旧换新
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-clock"></i>
+                话费充值
+            </a></li>
+        </ul>
+
+        <ul class="ads-img">
+            <li><a href="#"><img src="./img/ad1.jpeg" alt=""></a></li>
+            <li><a href="#"><img src="./img/ad2.jpeg" alt=""></a></li>
+            <li><a href="#"><img src="./img/ad3.jpeg" alt=""></a></li>
+        </ul>
+   </div>
+</body>
+</html>

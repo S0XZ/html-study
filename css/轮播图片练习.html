@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-list{
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .img-list .img{
+            width: 300px;
+            height: 200px;
+            border: solid;
+            background-color: gainsboro;
+            position: absolute; 
+        }
+        .img-list .img:nth-child(2){
+            z-index: 1;
+        }
+        .indicator{
+            /* background-color: darkgray; */
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            border-radius: 9px;
+            z-index: 2;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* 将背景颜色限制在内容区 */
+            background-clip: content-box;
+            border: transparent solid 3px;
+            float: left;
+            margin: 2px;
+            border-radius: 100%;
+        }
+        .dot:hover{
+            background-color: white;
+            border: rgba(255, 255, 255, 0.5) solid 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="img-list">
+        <div class="img">图片1</div>
+        <div class="img">图片2</div>
+        <div class="img">图片3</div>
+        <div class="img">图片4</div>
+        <div class="img">图片5</div>
+
+
+        <div class="indicator">
+            <a class="dot" href="javascript:;"></a>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+.topbar-wrapper{
+    background-color: #424242;
+    width: 100%;
+}
+.topbar{
+    background-color: #424242;  
+    height: 40px;
+    position: relative;
+}
+.topbar a{
+    font-size: 12px;
+}
+.service{
+    float: left;
+}
+.shop-cart, .user-info{
+    float: right;
+}
+/* 给li设置float，不影响其子元素 */
+ul.service li,ul.shop-cart li,ul.user-info li{
+    float: left;
+}
+.topbar li a{
+    text-decoration: none;
+    color: #b0b0b0;
+    line-height: 40px;
+    display: block;
+    padding: 0 8px;
+}
+.shop-cart a{
+    padding: 0;
+}
+.topbar li a:hover{
+    color: white;
+}
+li.line{
+    color: #727272;
+    line-height: 40px;
+    text-align: center; 
+}
+ul.shop-cart a{
+    display: block;
+    width: 120px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.302);
+}
+ul.shop-cart:hover a{
+    color: orangered;
+    background-color: white;
+}
+ul.shop-cart:hover .empty-cart{
+    display: block;
+    line-height: 100px;
+}
+/* 设置购物车下拉列表 */
+.shop-cart .empty-cart{
+    font-size: 12px;
+    background-color: white;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    line-height: 0px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    box-shadow: 0 10px 10px gainsboro;
+    transition: line-height 0.5s ;
+    z-index: 2;
+}
+ul.service li{ 
+    
+}
+ul.user-info{
+    margin-right: 10px;
+}
+
+/* 设置二维码部分 */
+.app-download{
+    position: relative;
+}
+li a.app-download div.qrcode{
+    display: block;
+    width: 124px;
+    height: 0px;
+    overflow: hidden;
+    background-color: whitesmoke;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(16, 16, 16, 0.279);
+    position: absolute;
+    left:-32px;
+    z-index: 2;
+    /* 为qrcode设置过渡效果 */
+    transition: height 0.5s;
+}
+.app-download .qrcode span{
+    color: black;
+}
+div.qrcode img{
+    width: 90px;
+    height: 90px;
+    margin: 17px 17px;
+    object-fit: cover;
+}
+.app-download:hover .qrcode{
+    display: block;
+    height: 148px;
+}
+li:hover>.app-download::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    display: block;
+    border: 8px solid transparent;
+    border-bottom-color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

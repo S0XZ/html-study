@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/css/all.css">
+    <style>
+        div.x1{
+            border: solid;
+            /* 行间距=行高-字体大小 */
+
+            font: 100 50px/1.333 sans-serif;
+            /* 字体大小/行高 字体类型 */
+            /* 省略不写的值仍然会被默认值覆盖 */
+
+            text-align: left;
+        }
+
+        span{
+            border: none;
+            font-size: 30px;
+            vertical-align: top;
+        }
+
+        p{
+            border: solid rgba(0, 0, 0, 0.257);
+        }
+        img{
+            width: 400px;
+            border: solid;
+            vertical-align: bottom;
+            /* 可以用于消除图片基线造成的影响 */
+        }
+        .box1{
+            border: solid;
+            width: 100px;
+            text-decoration: underline red dotted;
+            white-space: nowrap;
+            /* 不换行 */
+            overflow: hidden;
+            text-overflow:ellipsis;
+            /* 省略号 */
+        }
+        .box2{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="x1">Hello World<span>Fuck</span>!!!!
+    </div>
+
+    <p>
+        <img src="./img/橙子.JPG" alt="">
+    </p>
+
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, provident nisi ut ad minima ea atque officiis iste odit maxime nihil aspernatur sunt, illo alias quod nobis necessitatibus at autem.</div>
+    <div class="box2"></div>
+</body>
+</html>

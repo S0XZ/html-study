@@ -1,0 +1,16 @@
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+body{
+    font: 14px/1.5 Helvetica;
+    color: #333;
+    min-width: 1226px;
+}
+.w{
+    width: 1226px;
+    margin: 0 auto;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../iconfont/css/all.css">
+    <style>
+        body{
+            font-size: 14px;
+            font-family: sans-serif;
+            color: gray;
+        }
+
+        .clearfix::after,
+        .clearfix::before{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .top-bar-wrapper{
+            background-color: gainsboro;
+            line-height: 30px;
+            height: 30px;
+            border-bottom: solid 1px silver;
+        }
+        .top-bar{
+            width: 1190px;
+            margin: auto;
+        }
+        .location{
+            float: left;
+            border: none;
+            position: relative;
+        }
+        .location .fas{
+            color: red;
+        }
+        .location .city-list{
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: solid 1px silver;
+            display: none;
+            /* 使其脱离文档流 */
+            position: absolute;
+            top: 30px;
+            box-shadow: 2px 2px 0px whitesmoke;
+        }
+        .location .current-city{
+            border: 1px solid transparent;
+            border-bottom: 0;
+            border-top: 0;
+            
+        }
+        .location:hover .city-list{
+            display: block;
+        }
+        .location:hover .current-city{
+            background-color: white;
+            border: solid silver 1px;
+            z-index: 1;
+            position: relative;
+            border-bottom: 0;
+            border-top: 0;
+            padding-bottom: 1px;
+        }
+        .current-city{
+            padding: 0 10px
+        }
+        /* 城市块结束 */
+
+        .shortcut{
+            float: right;
+            position: relative;
+        }
+        .shortcut li.line{
+            width: 1px;
+            height: 10px;
+            background-color: silver;
+
+            margin: 10px 10px;
+        }
+        .shortcut li{
+            float: left;
+        }
+        /* 第二个窗口 */
+        .shortcut .myJD{
+            border: 1px solid transparent;
+            border-top: none;
+            border-bottom: none;
+            padding: 0 10px;
+        }
+        .shortcut li.with-window:hover .myJD{
+            background-color: white;
+            border: 1px solid silver;
+            border-top: none;
+            border-bottom: none;
+            padding-bottom: 1px;
+            position: relative;
+            z-index: 1;
+            
+        }
+        
+        .shortcut .pop-window{
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: solid 1px silver;
+            display: none;
+            /* 使其脱离文档流 */
+            position: absolute;
+            z-index: 0;
+            top: 30px;
+            box-shadow: 2px 2px 0px whitesmoke;
+        }
+        .shortcut li.with-window:hover .pop-window{
+            display: block;
+        }
+        .shortcut i{
+            color: silver;
+            font-size: 12px;
+        }
+
+        .top-bar a, .top-bar span{
+            color: gray;
+            text-decoration-line: none;
+        }
+        
+        .top-bar a:hover{
+            color: red;
+        }
+        .top-bar a.highlight{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar-wrapper">
+        <div class="top-bar clearfix">
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+                <div class="city-list">
+
+                </div>
+            </div>
+
+            <ul class="shortcut clearfix">
+                <li>
+                    <a href="javascript:;">你好，请登录</a>
+                    <a class="highlight" href="javascript:;">免费注册</a>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                
+                <li class="line"></li>
+                <li class="with-window">
+                    <div class="myJD">
+                        <a href="javascript:;">我的京东</a>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="pop-window"></div>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">京东会员</a>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <a class="highlight" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">手机京东</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

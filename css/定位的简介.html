@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: gainsboro;
+            float: left;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: silver;
+            float: left;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            clear: both;
+            /* 相对定位 */
+            /* 不会改变元素的骨架位置 */
+            position: relative;
+            left: 200px;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* 绝对定位 */
+            /* 会改变的骨架位置。如果指定left，top则覆盖元素本来的位置 */
+            /* 还会使得其脱离文档流 */
+            position: absolute;
+            left: 58px;
+            top: 58px;
+
+        }
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: whitesmoke;
+            position: absolute;
+            /* 父元素开启‘任意定位’可以让子元素的绝对定位参照物成为父元素而非整个body。 */
+            /* box5已经脱离文档流 */
+        }
+        .box6{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box5">5
+        <div class="box4">4</div>
+    </div>
+    <div class="box6">6</div>
+</body>
+</html>

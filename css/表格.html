@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格Table</title>
+</head>
+<style>
+    img{
+        float: right;
+        display: table;
+        overflow: hidden;
+        clear: both;
+    }
+    table{
+        width: 50%;
+        font-family: sans-serif;
+        margin: 0 auto;
+        border: solid;
+        border-spacing: 2px;
+        /* 边框合并 */
+        border-collapse: collapse;
+    }
+    td,th{
+        border: solid;
+        vertical-align: middle;
+        text-align: center;
+    }
+    /* 设置背景 */
+    thead tr{
+        background-color: silver;
+    }
+    tbody tr:nth-child(2n){
+        background-color: gainsboro;
+    }
+
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: gainsboro;
+        border: solid;
+        /* 这种方式可以设置子元素垂直居中 */
+        display: table-cell;
+        vertical-align: middle;
+        
+    }
+    .box2{
+        width: 100px;
+        height: 100px;
+        border: solid;
+        background-color: silver;
+        margin: auto;
+    }
+</style>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>收入</th>
+                <th>支出</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td colspan="2">B2</td>
+            </tr>
+            <tr>
+                <td colspan="1">A3</td>
+                <td colspan="1">B3</td>
+                <td colspan="1">C3</td>
+            </tr>
+            <tr>
+                <td colspan="1">A4</td>
+                <td colspan="1">B4</td>
+                <td colspan="1">C4</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+        </table>
+
+        <img class="photo-panel-img" id="photo-33322584643" border="0" src="https://live.staticflickr.com/2812/33322584643_d11a82a7c2_o.jpg"  alt="来自新浪微博的捆绑胖军警" >
+        <img class="photo-panel-img" id="photo-large-34003473061" border="0" src="https://live.staticflickr.com/2947/34003473061_e6f56ca765_o.jpg" alt="来自新浪微博的捆绑胖军警">
+</body>
+</html>

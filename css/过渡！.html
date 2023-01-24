@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡！</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .clearfix::after,
+        .clearfix::before{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .box1{
+            height: 400px;
+            background-color: gainsboro;
+        }
+        .box1>.box2{
+            width: 100px;
+            height: 100px;
+            margin: 150px auto;
+            background-color: whitesmoke;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.9s;
+            overflow: hidden;
+            position: relative;
+        }
+        .box2:hover{
+            box-shadow: 0 50px 30px rgba(0, 0, 0, 0.206);
+            margin: 100px auto;
+            width: 200px;
+            height: 230px;
+            background-color: white;
+        }
+        .box2>span:first-child{
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            
+            color: rgba(255, 0, 0, 0.671);
+            font-weight: bold;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.9s;
+        }
+        .box2>span:nth-child(2){
+            display: block;
+            box-sizing:border-box;
+            width: 200px;
+            margin-left: -50px;
+            padding: 10px;
+            color: transparent;
+            text-align: center;
+            font-size: small;
+            line-height: 3;
+            text-overflow: ellipsis;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1.2s;
+        }
+        .box2>a{
+            display: block;
+            width: 100px;
+            margin-left: 0px;
+            text-decoration: none;
+            color: red;
+            position: absolute;
+            text-align: center;
+
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.9s;
+        }
+        .box2:hover span:first-child{
+            font-size: 30px;
+            color: rgb(58, 58, 58);
+            line-height: 50px;
+        }
+        .box2:hover span:nth-child(2){
+            line-height: 1.4;
+            color: rgba(0, 0, 0, 0.621);
+            margin-left: 0px;
+        }
+        .box2:hover>a{
+            width: 200px;
+            margin-left: 0;
+        }
+
+        /* 动画 */
+        
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2 clearfix">
+            <span>Delete All</span>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque fugit unde facilis dolor. Dolores ullam nam officiis possimus quasi rerum accusantium necessitatibus, consectetur.</span>
+            <a href="#">I do confirm</a>
+        </div>
+    </div>
+</body>
+</html>

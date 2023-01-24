@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: whitesmoke;
+            margin-bottom: 10px;
+            animation-name: my-animation;
+            animation-play-state: running;
+            
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: both;
+            /* 
+            animation-direction属性：
+
+            假设一个物体动画是从左到右运行：
+
+            normal：正常，每次都从左到右；
+
+            reverse：每次都从右到左运行；
+
+            alternate：当动画开始下一个循环时，从上次结束的地方开始继续播放动画；
+
+            alternate-reverse: 第一个循环从右到左，其他与alternate相同。
+
+
+            */
+        }
+        .box1:hover{
+            animation-play-state: running;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: whitesmoke;
+            margin-bottom: 10px;
+        }
+        @keyframes my-animation {
+            from{
+                margin-left: 0px;
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+            }
+            to{
+                margin-left: 400px;
+                animation-timing-function: ease;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

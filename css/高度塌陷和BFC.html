@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            border: solid;
+            overflow: hidden;
+        }
+
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: gainsboro;
+            float: left;
+        }
+
+        .inner1{
+            width: 100px;
+            height: 200px;
+            background-color: darkgray;
+            float: left;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner1"></div>
+        <div class="inner"></div>
+    </div>
+
+    <div class="box1"></div>
+    <p>设置overFlow，或者改为行内块元素。 或者把outer也改成flow。</p>
+</body>
+</html>
